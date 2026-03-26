@@ -5,7 +5,7 @@ use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Env, Strin
 #[contracttype]
 #[derive(Clone, Debug)]
 pub struct Note {
-    // data note
+
 }
 
 // Storage key untuk data notes
@@ -19,6 +19,8 @@ impl NotesContract {
     // Fungsi untuk mendapatkan semua notes
     pub fn get_notes(env: Env) -> Vec<Note> {
         // 1. ambil data notes dari storage
+
+        return Vec::new(&env);
     }
 
     // Fungsi untuk membuat note baru
@@ -33,6 +35,7 @@ impl NotesContract {
         
         return String::from_str(&env, "Notes berhasil ditambahkan");
     }
+
     // Fungsi untuk menghapus notes berdasarkan id
     pub fn delete_note(env: Env, id: u64) -> String {
         // 1. ambil data notes dari storage 
@@ -48,14 +51,6 @@ impl NotesContract {
 }
 
 mod test;
-
-
-
-
-
-
-
-
 
 
 
